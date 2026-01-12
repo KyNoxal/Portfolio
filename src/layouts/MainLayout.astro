@@ -1,0 +1,20 @@
+---
+const { title = "Portfolio | Corentin EL" } = Astro.props;
+import Sidebar from '../components/Sidebar.astro';
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-p-black text-p-platinum flex flex-col md:flex-row h-screen overflow-hidden selection:bg-p-gold selection:text-p-black">
+    <Sidebar />
+    <main class="flex-1 overflow-y-auto p-6 md:p-12 custom-scrollbar">
+      <slot />
+    </main>
+  </body>
+</html>

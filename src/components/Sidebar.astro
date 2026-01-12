@@ -1,0 +1,125 @@
+---
+
+---
+<aside id="sidebar" class="fixed inset-y-0 left-0 z-50 w-80 bg-p-gray-dark border-r border-p-gray-blue/20 flex flex-col p-6 transition-transform duration-300 -translate-x-full md:translate-x-0 md:static md:h-screen">
+  
+  <button id="close-menu" class="md:hidden absolute top-4 right-4 text-p-gold p-2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+  </button>
+
+  <div class="flex flex-col items-center mb-10 text-center text-p-platinum">
+    <div class="w-24 h-24 rounded-full bg-p-gray-blue mb-4 flex items-center justify-center border-2 border-p-gold overflow-hidden shadow-[0_0_15px_rgba(223,178,16,0.3)] hover:rotate-3 transition-transform duration-500">
+      <img 
+        src="/images/6720840755940036346.jpeg" 
+        alt="Photo de Corentin E.L." 
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <h2 class="text-xl font-bold italic">Corentin <span class="text-p-gold uppercase">E.L.</span></h2>
+  </div>
+
+  <nav class="flex-1 space-y-4 overflow-y-auto custom-scrollbar">
+    <a href="#accueil" class="menu-link block py-2 font-bold uppercase tracking-widest text-p-gray-blue hover:text-p-gold transition-all duration-300">Accueil</a>
+
+    <details open class="group">
+      <summary class="list-none cursor-pointer text-md font-bold uppercase tracking-widest text-p-gray-blue flex justify-between items-center group-open:text-p-platinum transition-colors">
+        Formations <span class="transition-transform group-open:rotate-90 text-[15px]">▶</span>
+      </summary>
+      <ul class="pl-4 mt-2 space-y-1 border-l border-p-gray-blue/20 text-sm">
+        <li><a href="#master" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">Master ILSEN</a></li>
+        <li><a href="#but" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">BUT Informatique</a></li>
+        <li><a href="#bac" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">BAC Technologique</a></li>
+      </ul>
+    </details>
+
+    <details class="group">
+      <summary class="list-none cursor-pointer text-md font-bold uppercase tracking-widest text-p-gray-blue flex justify-between items-center group-open:text-p-platinum transition-colors">
+        Expériences professionnelles<span class="transition-transform group-open:rotate-90 text-[15px]">▶</span>
+      </summary>
+      <ul class="pl-4 mt-2 space-y-1 border-l border-p-gray-blue/20 text-sm">
+        <li><a href="#unicancer" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">UniCancer (Alternance)</a></li>
+        <li><a href="#gustave" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">Gustave Roussy (Alternance)</a></li>
+        <li><a href="#apyclic" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">Apyclic (Stage)</a></li>
+      </ul>
+    </details>
+
+    <details class="group">
+      <summary class="list-none cursor-pointer text-md font-bold uppercase tracking-widest text-p-gray-blue flex justify-between items-center group-open:text-p-platinum transition-colors">
+        Bénévolats <span class="transition-transform group-open:rotate-90 text-[15px]">▶</span>
+      </summary>
+      <ul class="pl-4 mt-2 space-y-1 border-l border-p-gray-blue/20 text-sm">
+        <li><a href="#bde" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">Trésorier - BDE ETII</a></li>
+        <li><a href="#comite" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">Bénévole - Comité des fêtes</a></li>
+        <li><a href="#froment" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">Bénévole - Farine de Froment</a></li>
+      </ul>
+    </details>
+
+    <details class="group">
+      <summary class="list-none cursor-pointer text-md font-bold uppercase tracking-widest text-p-gray-blue flex justify-between items-center group-open:text-p-platinum transition-colors">
+        Centres d'intérêts <span class="transition-transform group-open:rotate-90 text-[15px]">▶</span>
+      </summary>
+      <ul class="pl-4 mt-2 space-y-1 border-l border-p-gray-blue/20 text-sm">
+        <li><a href="#ferro" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">Ferroviaire</a></li>
+        <li><a href="#info" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">Informatique</a></li>
+        <li><a href="#zik" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">Musique</a></li>
+      </ul>
+    </details>
+  </nav>
+
+  <div class="mt-auto pt-6">
+    <a href="#" target="_blank" class="block w-full py-3 bg-p-gold text-p-black font-bold text-center rounded hover:shadow-[0_0_20px_rgba(223,178,16,0.4)] hover:-translate-y-1 transition-all duration-300">
+      Mon CV (Drive)
+    </a>
+  </div>
+</aside>
+
+<button id="open-menu" class="md:hidden fixed top-4 left-4 z-40 bg-p-gray-dark border border-p-gray-blue/20 text-p-gold p-3 rounded-md shadow-xl active:scale-90 transition-transform">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+</button>
+
+<style>
+  .active-link {
+    color: #DFB210 !important;
+    font-weight: 800;
+    padding-left: 1rem !important;
+    border-left: 2px solid #DFB210;
+    margin-left: -1rem;
+  }
+</style>
+
+<script>
+  const sidebar = document.getElementById('sidebar');
+  const openBtn = document.getElementById('open-menu');
+  const closeBtn = document.getElementById('close-menu');
+  const menuLinks = document.querySelectorAll('.menu-link');
+
+  // Toggle Menu
+  openBtn.addEventListener('click', () => sidebar.classList.remove('-translate-x-full'));
+  const closeMenu = () => sidebar.classList.add('-translate-x-full');
+  closeBtn.addEventListener('click', closeMenu);
+
+  // Active Link Logic
+  function setActiveLink(hash) {
+    menuLinks.forEach(link => {
+      link.classList.remove('active-link');
+      if (link.getAttribute('href') === hash) {
+        link.classList.add('active-link');
+      }
+    });
+  }
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      setActiveLink(link.getAttribute('href'));
+      if (window.innerWidth < 768) closeMenu();
+    });
+  });
+
+  window.addEventListener('load', () => {
+    setActiveLink(window.location.hash || '#accueil');
+  });
+
+  window.addEventListener('hashchange', () => {
+    setActiveLink(window.location.hash);
+  });
+</script>

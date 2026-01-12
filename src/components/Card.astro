@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  date?: string;
+  id?: string;
+  variant?: 'gold' | 'gray';
+}
+
+const { title, subtitle, date, id, variant = 'gray' } = Astro.props;
+---
+<button 
+  id={id}
+  onclick={`console.log('${title} cliqué')`}
+  class:list={[
+    "min-w-[300px] p-6 text-left transition-all border group",
+    variant === 'gold' ? "bg-p-gray-dark border-l-4 border-l-p-gold border-y-transparent border-r-transparent" : "bg-p-gray-dark border-p-gray-blue/10 hover:border-p-gold"
+  ]}
+>
+  {date && <span class="text-xs text-p-gold font-mono">{date}</span>}
+  <h3 class="font-bold text-lg text-p-platinum group-hover:text-p-gold transition-colors">{title}</h3>
+  {subtitle && <p class="text-p-gray-blue text-sm mt-1">{subtitle}</p>}
+</button>

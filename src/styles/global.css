@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "tailwindcss";
+
+@theme {
+  /* On définit ta palette ici pour la v4 */
+  --color-p-black: #1A1A1C;
+  --color-p-gray-dark: #3C3B41;
+  --color-p-gray-blue: #93A8AC;
+  --color-p-platinum: #D8DBE2;
+  --color-p-gold: #DFB210;
+}
