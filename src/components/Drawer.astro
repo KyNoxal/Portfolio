@@ -1,0 +1,67 @@
+---
+
+---
+<div id="side-drawer" class="fixed inset-y-0 right-0 z-[60] w-full md:w-[900px] bg-p-gray-dark border-l border-p-gray-blue/20 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out">
+  <div class="h-full flex flex-col p-8">
+    <button id="close-drawer" class="self-end text-p-gray-blue hover:text-p-gold transition-colors mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+
+    <div id="drawer-content" class="overflow-y-auto custom-scrollbar flex-1">
+      <div id="drawer-loader" class="text-p-gold italic">Chargement...</div>
+    </div>
+  </div>
+</div>
+
+<div id="drawer-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[55] hidden opacity-0 transition-opacity duration-300"></div>
+
+<script>
+  const drawer = document.getElementById('side-drawer');
+  const overlay = document.getElementById('drawer-overlay');
+  const closeBtn = document.getElementById('close-drawer');
+
+  const closeDrawer = () => {
+    drawer.classList.add('translate-x-full');
+    overlay.classList.add('opacity-0');
+    setTimeout(() => overlay.classList.add('hidden'), 300);
+    document.body.style.overflow = '';
+  };
+
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+
+  window.addEventListener('open-drawer', (e: any) => {
+    const { title, subtitle, date, description, image } = e.detail;
+    const content = document.getElementById('drawer-content');
+    
+    content.innerHTML = `
+      <div class="flex justify-between items-start gap-6 mb-8">
+        <div class="flex-1">
+          <span class="text-p-gold font-mono text-sm">${date || ''}</span>
+          <h2 class="text-3xl font-black text-p-platinum mt-2 mb-4">${title}</h2>
+          <p class="text-p-gray-blue text-lg italic border-l-2 border-p-gold pl-4">${subtitle || ''}</p>
+        </div>
+        
+        ${image ? `
+          <div class="w-24 h-24 flex-shrink-0 bg-p-black/50 border border-p-gray-blue/20 rounded-xl overflow-hidden p-2">
+            <img src="${image}" alt="Logo ${title}" class="w-full h-full object-contain" />
+          </div>
+        ` : ''}
+      </div>
+      
+      <div class="prose prose-invert max-w-none">
+        <h4 class="text-p-gold uppercase tracking-widest text-xs font-bold mb-4">Description</h4>
+        <div class="text-p-platinum/90 leading-relaxed space-y-4 border border-p-gray-blue/20 p-6 rounded-lg bg-p-black/50 shadow-inner">
+          ${description}
+        </div>
+      </div>
+    `;
+
+    overlay.classList.remove('hidden');
+    setTimeout(() => {
+      overlay.classList.remove('opacity-0');
+      drawer.classList.remove('translate-x-full');
+    }, 10);
+    document.body.style.overflow = 'hidden';
+  });
+</script>
