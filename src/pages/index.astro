@@ -1,16 +1,61 @@
 ---
-
+import MainLayout from '../layouts/MainLayout.astro';
+import Card from '../components/Card.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Portfolio - Corentin E.L.">
+  <div class="max-w-6xl mx-auto space-y-16 pb-20">
+    
+    <section id="accueil" class="min-h-[20vh] flex flex-col justify-center">
+      <h1 class="text-6xl font-black mb-6">Portfolio de <span class="text-p-gold uppercase">Corentin Echivard--Lizaso</span></h1>
+      <p class="text-xl text-p-gray-blue max-w-2xl leading-relaxed">
+        Bienvenue sur mon portfolio !
+      </p>
+    </section>
+
+    <section id="formations">
+      <h2 class="text-2xl font-bold mb-8 flex items-center gap-4">
+        Formations <span class="h-px flex-1 bg-p-gray-blue/10"></span>
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Card id="master" title="Master ILSEN" subtitle="Université d'Avignon" date="2025 - Aujourd'hui" variant="gold" />
+        <Card id="but" title="BUT Informatique - Parcours A" subtitle="IUT de Dijon-Auxerre-Nevers" date="2022 - 2025" variant="gold" />
+        <Card id="bac" title="BAC Technologique - Série STI2D" subtitle="Lycée Geoffroy Saint-Hilaire" date="2019 - 2022" variant="gold" />
+      </div>
+    </section>
+
+    <section id="experiences">
+      <h2 class="text-2xl font-bold mb-8 flex items-center gap-4">
+        Expériences professionnelles <span class="h-px flex-1 bg-p-gray-blue/10"></span>
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Card id="unicancer" title="UniCancer" subtitle="Alternance - Partie 2 - BUT Informatique" date="Avril 2025 - Août 2025" variant="gold"/>
+        <Card id="gustave" title="Gustave Roussy" subtitle="Alternance - Partie 1 - BUT Informatique" date="Septembre 2024 - Mars 2025" variant="gold"/>
+        <Card id="apyclic" title="Apyclic" subtitle="Stage d'études - BUT Informatique" date="Janvier 2024 - Mars 2024" variant="gold"/>
+      </div>
+    </section>
+
+    <section id="benevolats">
+      <h2 class="text-2xl font-bold mb-8 flex items-center gap-4">
+        Bénévolats <span class="h-px flex-1 bg-p-gray-blue/10"></span>
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Card id="bde" title="Trésorier - BDE ETII" subtitle="Gestion d'une association étudiante" />
+        <Card id="comite" title="Bénévole - Comité des fêtes" subtitle="Association évènementielle" />
+        <Card id="froment" title="Bénévole - Farine de Froment" subtitle="Association évènementielle" />
+      </div>
+    </section>
+
+    <section id="interets">
+      <h2 class="text-2xl font-bold mb-8 flex items-center gap-4">
+        Centres d'intérêts <span class="h-px flex-1 bg-p-gray-blue/10"></span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <Card id="ferro" title="Ferroviaire" subtitle="Passion & Modélisme" />
+        <Card id="info" title="Informatique" subtitle="Veille & Projets personnels" />
+        <Card id="zik" title="Musique" subtitle="Pratique instrumentale & Solfège" />
+      </div>
+    </section>
+
+  </div>
+</MainLayout>
