@@ -50,7 +50,7 @@
       <ul class="pl-4 mt-2 space-y-1 border-l border-p-gray-blue/20 text-sm">
         <li><a href="#bde" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">Trésorier - BDE ETII</a></li>
         <li><a href="#comite" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">Bénévole - Comité des fêtes</a></li>
-        <li><a href="#froment" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">Bénévole - Farine de Froment</a></li>
+        <li><a href="#cjeune" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">Comité Jeunnesse</a></li>
       </ul>
     </details>
 
@@ -61,14 +61,14 @@
       <ul class="pl-4 mt-2 space-y-1 border-l border-p-gray-blue/20 text-sm">
         <li><a href="#ferro" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">Ferroviaire</a></li>
         <li><a href="#info" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">Informatique</a></li>
-        <li><a href="#zik" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">Musique</a></li>
+        <li><a href="#musique" class="menu-link block py-1 text-p-platinum/70 hover:text-p-gold hover:pl-2 transition-all">Musique</a></li>
       </ul>
     </details>
   </nav>
 
   <div class="mt-auto pt-6">
     <a href="#" target="_blank" class="block w-full py-3 bg-p-gold text-p-black font-bold text-center rounded hover:shadow-[0_0_20px_rgba(223,178,16,0.4)] hover:-translate-y-1 transition-all duration-300">
-      Mon CV (Drive)
+      Voir mon CV
     </a>
   </div>
 </aside>
@@ -93,12 +93,10 @@
   const closeBtn = document.getElementById('close-menu');
   const menuLinks = document.querySelectorAll('.menu-link');
 
-  // Toggle Menu
   openBtn.addEventListener('click', () => sidebar.classList.remove('-translate-x-full'));
   const closeMenu = () => sidebar.classList.add('-translate-x-full');
   closeBtn.addEventListener('click', closeMenu);
 
-  // Active Link Logic
   function setActiveLink(hash) {
     menuLinks.forEach(link => {
       link.classList.remove('active-link');

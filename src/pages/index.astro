@@ -8,7 +8,12 @@ import LyceeTechnologique from '../components/details/LyceeTechnologique.astro';
 import Unicancer from '../components/details/Unicancer.astro';
 import GustaveRoussy from '../components/details/GustaveRoussy.astro';
 import Apyclic from '../components/details/Apyclic.astro';
-
+import BDE from '../components/details/BDE.astro';
+import Comite from '../components/details/Comite.astro';
+import CJeune from '../components/details/CJeune.astro';
+import Ferroviaire from '../components/details/Ferroviaire.astro';
+import Informatique from '../components/details/Informatique.astro';
+import Musique from '../components/details/Musique.astro';
 ---
 
 <MainLayout title="Portfolio - Corentin E.L.">
@@ -65,13 +70,13 @@ import Apyclic from '../components/details/Apyclic.astro';
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <Card id="bde" title="Trésorier - BDE ETII" subtitle="Gestion d'une association étudiante">
-          
+          <BDE />
         </Card>
         <Card id="comite" title="Bénévole - Comité des fêtes" subtitle="Association évènementielle">
-          
+          <Comite />
         </Card>
-        <Card id="froment" title="Bénévole - Farine de Froment" subtitle="Association évènementielle">
-          
+        <Card id="cjeune" title="Membre - Comité Jeunesse" subtitle="Association évènementielle">
+          <CJeune />
         </Card>
       </div>
     </section>
@@ -81,9 +86,15 @@ import Apyclic from '../components/details/Apyclic.astro';
         Centres d'intérêts <span class="h-px flex-1 bg-p-gray-blue/10"></span>
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card id="ferro" title="Ferroviaire" subtitle="Passion & Modélisme" />
-        <Card id="info" title="Informatique" subtitle="Veille & Projets personnels" />
-        <Card id="musique" title="Musique" subtitle="Pratique instrumentale & Solfège" />
+        <Card id="ferro" title="Ferroviaire" subtitle="Passion & Modélisme">
+          <Ferroviaire />
+        </Card>
+        <Card id="info" title="Informatique" subtitle="Veille & Projets personnels" >
+          <Informatique />
+        </Card>
+        <Card id="musique" title="Musique" subtitle="Pratique instrumentale & Solfège">
+          <Musique />
+        </Card>
       </div>
     </section>
 
