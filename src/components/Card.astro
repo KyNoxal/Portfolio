@@ -2,38 +2,55 @@
 interface Props {
   title: string;
   subtitle?: string;
-  date?: string;
+  uptext?: string;
   id?: string;
   image?: string;
-  variant?: 'gold' | 'gray';
+  variant?: 'gold' | 'gray' | 'cv';
 }
 
-const { title, subtitle, date, id, image, variant = 'gray' } = Astro.props;
+const { title, subtitle, uptext, id, image, variant = 'gray' } = Astro.props;
 ---
 <button 
   id={id}
   class:list={[
-    "card-trigger min-w-[300px] p-6 text-left transition-all border group relative overflow-hidden",
-    variant === 'gold' ? 
-    "bg-p-gray-dark border-l-4 border-l-p-gold border-y-transparent border-r-transparent" : 
-    "bg-p-gray-dark border-p-gray-blue/10 hover:border-p-gold"
+    "card-trigger text-left transition-all border group relative overflow-hidden w-full",
+    variant === 'cv' ? "p-3 mb-1" : "min-w-[300px] p-6",
+    variant === 'gold' && "bg-p-gray-dark border-l-4 border-l-p-gold border-y-transparent border-r-transparent",
+    variant === 'gray' && "bg-p-gray-dark border-p-gray-blue/10 hover:border-p-gold",
+    variant === 'cv' && "bg-p-gray-dark/50 border-l-2 border-l-p-gold border-y-p-gray-blue/5 border-r-p-gray-blue/5"
   ]}
   data-title={title}
   data-subtitle={subtitle}
-  data-date={date}
+  data-uptext={uptext}
   data-image={image}
 >
-  {date && <span class="text-xs text-p-gold font-mono">{date}</span>}
-  <h3 class="font-bold text-lg text-p-platinum group-hover:text-p-gold transition-colors">{title}</h3>
-  {subtitle && <p class="text-p-gray-blue text-sm mt-1">{subtitle}</p>}
+  {uptext && <span class:list={["font-mono text-p-gold", variant === 'cv' ? "text-[10px]" : "text-xs"]}>{uptext}</span>}
+  
+  <h3 class:list={[
+    "font-bold text-p-platinum group-hover:text-p-gold transition-colors leading-tight",
+    variant === 'cv' ? "text-sm" : "text-lg"
+  ]}>
+    {title}
+  </h3>
+
+  {subtitle && (
+    <p class:list={[
+      "text-p-gray-blue mt-0.5",
+      variant === 'cv' ? "text-[11px]" : "text-sm"
+    ]}>
+      {subtitle}
+    </p>
+  )}
   
   <div class="hidden-content hidden">
     <slot />
   </div>
 
-  <span class="absolute bottom-2 right-2 text-p-gold opacity-0 text-md cursor-pointer font-bold group-hover:opacity-100 hover:bg-p-gold/3 transition-all rounded px-2 py-1">
-    Voir plus
-  </span>
+  {variant !== 'cv' && (
+    <span class="absolute bottom-2 right-2 text-p-gold opacity-0 text-md cursor-pointer font-bold group-hover:opacity-100 hover:bg-p-gold/3 transition-all rounded px-2 py-1">
+      Voir plus
+    </span>
+  )}
 </button>
 
 <script>
@@ -44,7 +61,7 @@ const { title, subtitle, date, id, image, variant = 'gray' } = Astro.props;
       const detail = {
         title: card.getAttribute('data-title'),
         subtitle: card.getAttribute('data-subtitle'),
-        date: card.getAttribute('data-date'),
+        uptext: card.getAttribute('data-uptext'),
         image: card.getAttribute('data-image'),
         description: hiddenDiv ? hiddenDiv.innerHTML : ""
       };
