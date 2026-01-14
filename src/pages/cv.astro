@@ -1,0 +1,256 @@
+---
+import Card from '../components/Card.astro';
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Car, 
+  Smartphone, 
+  Globe,
+  ExternalLink 
+} from 'lucide-astro';
+import '../styles/global.css';
+---
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>CV - Corentin Echivard--Lizaso</title>
+<style is:global>
+    .a4-container {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 20px auto;
+        background-color: #121212;
+        color: #e5e5e5;
+        padding: 8mm;
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media print {
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        html, body {
+            background-color: #ffffff !important;
+            color: #1a1a1a !important;
+            height: auto;
+        }
+
+        .a4-container {
+            margin: 0;
+            padding: 10mm;
+            width: 210mm;
+            height: 297mm;
+            background-color: #ffffff !important;
+            box-shadow: none;
+            border: none !important;
+        }
+
+        .text-p-gold {
+            color: #cc9900 !important; 
+        }
+
+        .text-p-gray-blue {
+            color: #4b5563 !important;
+        }
+
+        .text-p-platinum {
+            color: #1a1a1a !important;
+        }
+
+        .card-trigger {
+            print-color-adjust: exact !important;
+            -webkit-print-color-adjust: exact !important;
+            
+            background-color: #f3f4f6 !important; 
+            border: 1px solid #e5e7eb !important;
+            border-left: 3px solid #cc9900 !important;
+            color: #1a1a1a !important;
+            border-radius: 4px;
+        }
+
+        .bg-p-gray-blue\/20 {
+            print-color-adjust: exact !important;
+            -webkit-print-color-adjust: exact !important;
+            background-color: #e5e7eb !important;
+            height: 1px !important;
+        }
+
+        .no-print { display: none !important; }
+
+        img {
+            filter: none !important;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+        }
+
+        a.group {
+            print-color-adjust: exact !important;
+            -webkit-print-color-adjust: exact !important;
+            background-color: #f3f4f6 !important;
+            border: 1px solid #e5e7eb !important;
+            border-radius: 12px !important;
+        }
+
+        .bg-white {
+            print-color-adjust: exact !important;
+            -webkit-print-color-adjust: exact !important;
+            background-color: #ffffff !important;
+        }
+
+        .text-p-gray-blue {
+            color: #4b5563 !important;
+        }
+    }
+</style>
+</head>
+<body class="bg-p-black text-p-platinum font-sans">
+
+    <div class="no-print fixed bottom-8 right-8 z-50">
+        <button onclick="window.print()" class="flex items-center gap-2 bg-p-gold text-p-black font-bold px-6 py-3 rounded-full shadow-2xl hover:scale-105 transition-all">
+            <ExternalLink size={20} /> Enregistrer le CV (PDF)
+        </button>
+    </div>
+
+    <div class="a4-container border border-p-gray-blue/10">
+        
+        <header class="flex justify-between items-start border-b-2 border-p-gold pb-8 mb-8">
+            <div class="flex-1">
+                <h1 class="text-5xl font-black uppercase tracking-tighter leading-none">
+                    Corentin <br/>
+                    <span class="text-p-gold">Echivard--Lizaso</span>
+                </h1>
+                <p class="text-p-gray-blue text-xl mt-3 font-semibold">Etudiant en première année de Master ILSEN </p>
+                <div class="mt-4 p-4 bg-p-black/30 border-l-4 border-p-gold rounded-r-lg max-w-2xl">
+                    <p class="text-p-platinum/90 text-sm leading-relaxed italic">
+                        "Je recherche une alternance dans le domaine du développement web pour ma deuxième année de Master ILSEN à l'Université d'Avignon."
+                    </p>
+                </div>
+            </div>
+            
+            <div class="w-32 h-32 rounded-2xl border-2 border-p-gold overflow-hidden rotate-3 hover:rotate-0 transition-transform duration-500 shadow-2xl">
+                <img src="/Portfolio/images/6720840755940036346.jpeg" alt="Photo de Corentin" class="w-full h-full object-cover" />
+            </div>
+        </header>
+
+        <div class="grid grid-cols-12 gap-8">
+            
+            <aside class="col-span-4 space-y-8 border-r border-p-gray-blue/10 pr-6">
+                
+                <section class="space-y-4">
+                    <h3 class="text-p-gold font-bold uppercase tracking-widest text-xs mb-4 flex items-center gap-2">
+                        <Smartphone size={14} /> Coordonnées 
+                    </h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-3 text-p-gray-blue">
+                            <Phone size={16} class="text-p-gold" /> 06 07 33 93 40
+                        </li>
+                        <li class="flex items-center gap-3 text-p-gray-blue">
+                            <Mail size={16} class="text-p-gold" /> corentin.lizaso@gmail.com
+                        </li>
+                        <li class="flex items-center gap-3 text-p-gray-blue">
+                            <MapPin size={16} class="text-p-gold" /> Avignon, France
+                        </li>
+                        <li class="flex items-center gap-3 text-p-gray-blue">
+                            <Car size={16} class="text-p-gold" /> Mobile / Permis B
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="space-y-6">
+                    <h3 class="text-p-gold font-bold uppercase tracking-widest text-xs flex items-center gap-2">
+                        <Globe size={14} /> Liens Numériques
+                    </h3>
+                    <div class="grid grid-cols-1 gap-4">
+                        <a href="https://kynoxal.github.io/Portfolio/" target="_blank" class="flex items-center gap-4 p-3 bg-white/5 border border-p-gray-blue/20 rounded-xl hover:bg-p-gold/10 transition-colors group">
+                            <div class="bg-white p-1 rounded-lg w-16 h-16 shrink-0">
+                                <img src="/Portfolio/images/qr-codes/qr-code-linkedIn.png" alt="QR Portfolio" class="w-full h-full" />
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-p-gold uppercase tracking-tighter">Portfolio</p>
+                                <p class="text-[10px] text-p-gray-blue">Scannez pour voir mes projets</p>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/corentin-echivard-lizaso-77480026b/" target="_blank" class="flex items-center gap-4 p-3 bg-white/5 border border-p-gray-blue/20 rounded-xl hover:bg-p-gold/10 transition-colors group">
+                            <div class="bg-white p-1 rounded-lg w-16 h-16 shrink-0">
+                                <img src="/images/qr-codes/qr-code-linkedIn.png" alt="QR LinkedIn" class="w-full h-full" />
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-p-gold uppercase tracking-tighter">LinkedIn</p>
+                                <p class="text-[10px] text-p-gray-blue">Mon réseau pro</p>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="space-y-4">
+                   <h3 class="text-p-gold font-bold uppercase tracking-widest text-xs">Centres d'intérêts</h3>
+                   <div class="space-y-2 overflow-hidden">
+                       <Card title="Ferroviaire" variant="cv" />
+                       <Card title="Informatique" variant="cv" />
+                       <Card title="Musique" variant="cv" />
+                   </div>
+                </section>
+            </aside>
+
+            <main class="col-span-8 space-y-8">
+                <section>
+                    <h2 class="text-xl font-black mb-4 flex items-center gap-4">
+                        Formations <span class="h-px flex-1 bg-p-gray-blue/20"></span>
+                    </h2>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div class="max-w-[260px] overflow-hidden">
+                            <Card title="Master ILSEN" subtitle="Univ. Avignon" uptext="2025 - 2027" variant="cv" />
+                        </div>
+                        <div class="max-w-[260px] overflow-hidden">
+                            <Card title="BUT Informatique" subtitle="IUT Dijon" uptext="2022 - 2025" variant="cv" />
+                        </div>
+                        <div class="max-w-[260px] overflow-hidden">
+                            <Card title="BAC STI2D" subtitle="Lycée G.S.H" uptext="2019 - 2022" variant="cv" />
+                        </div>
+                    </div>
+                </section>
+            
+                <section>
+                    <h2 class="text-xl font-black mb-4 flex items-center gap-4">
+                        Expériences <span class="h-px flex-1 bg-p-gray-blue/20"></span>
+                    </h2>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div class="max-w-[260px] overflow-hidden">
+                            <Card title="UniCancer" subtitle="Alternance" uptext="2025" variant="cv" />
+                        </div>
+                        <div class="max-w-[260px] overflow-hidden">
+                            <Card title="Gustave Roussy" subtitle="Alternance" uptext="2024" variant="cv" />
+                        </div>
+                        <div class="max-w-[260px] overflow-hidden">
+                            <Card title="Apyclic" subtitle="Stage" uptext="2024" variant="cv" />
+                        </div>
+                    </div>
+                </section>
+            
+                <section>
+                    <h2 class="text-xl font-black mb-4 flex items-center gap-4">
+                        Bénévolats <span class="h-px flex-1 bg-p-gray-blue/20"></span>
+                    </h2>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div class="max-w-[260px] overflow-hidden">
+                            <Card title="BDE ETII" subtitle="Trésorier" variant="cv" />
+                        </div>
+                        <div class="max-w-[260px] overflow-hidden">
+                            <Card title="Comité Fêtes" subtitle="Bénévole" variant="cv" />
+                        </div>
+                        <div class="max-w-[260px] overflow-hidden">
+                            <Card id="cjeune" title="Comité Jeunesse" subtitle="Membre" variant="cv"/>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

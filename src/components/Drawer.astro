@@ -31,13 +31,13 @@
   overlay.addEventListener('click', closeDrawer);
 
   window.addEventListener('open-drawer', (e: any) => {
-    const { title, subtitle, date, description, image } = e.detail;
+    const { title, subtitle, uptext, description, image } = e.detail;
     const content = document.getElementById('drawer-content');
     
     content.innerHTML = `
       <div class="flex justify-between items-start gap-6 mb-8">
         <div class="flex-1">
-          <span class="text-p-gold font-mono text-sm">${date || ''}</span>
+          <span class="text-p-gold font-mono text-sm">${uptext || ''}</span>
           <h2 class="text-3xl font-black text-p-platinum mt-2 mb-4">${title}</h2>
           <p class="text-p-gray-blue text-lg italic border-l-2 border-p-gold pl-4">${subtitle || ''}</p>
         </div>
