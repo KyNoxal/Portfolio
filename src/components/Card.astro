@@ -4,20 +4,51 @@ interface Props {
   subtitle?: string;
   date?: string;
   id?: string;
+  image?: string;
   variant?: 'gold' | 'gray';
 }
 
-const { title, subtitle, date, id, variant = 'gray' } = Astro.props;
+const { title, subtitle, date, id, image, variant = 'gray' } = Astro.props;
 ---
 <button 
   id={id}
-  onclick={`console.log('${title} cliqué')`}
   class:list={[
-    "min-w-[300px] p-6 text-left transition-all border group",
-    variant === 'gold' ? "bg-p-gray-dark border-l-4 border-l-p-gold border-y-transparent border-r-transparent" : "bg-p-gray-dark border-p-gray-blue/10 hover:border-p-gold"
+    "card-trigger min-w-[300px] p-6 text-left transition-all border group relative overflow-hidden",
+    variant === 'gold' ? 
+    "bg-p-gray-dark border-l-4 border-l-p-gold border-y-transparent border-r-transparent" : 
+    "bg-p-gray-dark border-p-gray-blue/10 hover:border-p-gold"
   ]}
+  data-title={title}
+  data-subtitle={subtitle}
+  data-date={date}
+  data-image={image}
 >
   {date && <span class="text-xs text-p-gold font-mono">{date}</span>}
   <h3 class="font-bold text-lg text-p-platinum group-hover:text-p-gold transition-colors">{title}</h3>
   {subtitle && <p class="text-p-gray-blue text-sm mt-1">{subtitle}</p>}
+  
+  <div class="hidden-content hidden">
+    <slot />
+  </div>
+
+  <span class="absolute bottom-2 right-2 text-p-gold opacity-0 text-md cursor-pointer font-bold group-hover:opacity-100 hover:bg-p-gold/3 transition-all rounded px-2 py-1">
+    Voir plus
+  </span>
 </button>
+
+<script>
+  const cards = document.querySelectorAll('.card-trigger');
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const hiddenDiv = card.querySelector('.hidden-content');
+      const detail = {
+        title: card.getAttribute('data-title'),
+        subtitle: card.getAttribute('data-subtitle'),
+        date: card.getAttribute('data-date'),
+        image: card.getAttribute('data-image'),
+        description: hiddenDiv ? hiddenDiv.innerHTML : ""
+      };
+      window.dispatchEvent(new CustomEvent('open-drawer', { detail }));
+    });
+  });
+</script>
