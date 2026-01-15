@@ -14,6 +14,9 @@ import CJeune from '../components/details/CJeune.astro';
 import Ferroviaire from '../components/details/Ferroviaire.astro';
 import Informatique from '../components/details/Informatique.astro';
 import Musique from '../components/details/Musique.astro';
+import Portfolio from '../components/details/Portfolio.astro';
+import MercheVentory from '../components/details/Merchventory.astro';
+import Cryptadvisor from '../components/details/crypdadvisor.astro';
 ---
 
 <MainLayout title="Portfolio - Corentin E.L.">
@@ -60,6 +63,23 @@ import Musique from '../components/details/Musique.astro';
         </Card>
         <Card id="apyclic" title="Apyclic informatique" subtitle="Stage d'études - BUT Informatique" uptext="Janvier 2024 - Mars 2024" variant="gold" image="/Portfolio/images/logos/Apyclic-logo.webp">
           <Apyclic />
+        </Card>
+      </div>
+    </section>
+
+    <section id="project">
+      <h2 class="text-2xl font-bold mb-8 flex items-center gap-4">
+        Projets <span class="h-px flex-1 bg-p-gray-blue/10"></span>
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Card id="merchventory" title="Merchventory" subtitle="Application de gestion de stock pour artistes musicaux" uptext="PHP 8 - Symfony - MySQL" variant="gold" image="/Portfolio/images/logos/Merchventory-logo.png">
+          <MercheVentory />
+        </Card>
+        <Card id="portfolio" title="Portfolio Personnel" subtitle="Site web de présentation de mon parcours et de mes compétences" uptext="Astro - Tailwind CSS" variant="gold" image="/Portfolio/images/logos/Portfolio-logo.png">
+          <Portfolio />
+        </Card>
+        <Card id="cryptadvisor" title="Crypta Dvisor" subtitle="Projet d'étude de génie logiciel avancé" uptext="Express.JS - React - DevOps" variant="gold">
+          <Cryptadvisor />
         </Card>
       </div>
     </section>
