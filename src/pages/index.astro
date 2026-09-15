@@ -12,7 +12,6 @@ import BDE from '../components/details/BDE.astro';
 import Comite from '../components/details/Comite.astro';
 import CJeune from '../components/details/CJeune.astro';
 import Ferroviaire from '../components/details/Ferroviaire.astro';
-import Informatique from '../components/details/Informatique.astro';
 import Musique from '../components/details/Musique.astro';
 import Portfolio from '../components/details/Portfolio.astro';
 import MercheVentory from '../components/details/Merchventory.astro';
@@ -54,11 +53,13 @@ import Cryptadvisor from '../components/details/crypdadvisor.astro';
       <h2 class="text-2xl font-bold mb-8 flex items-center gap-4">
         Expériences professionnelles <span class="h-px flex-1 bg-p-gray-blue/10"></span>
       </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <Card id="unicancer" title="UniCancer" subtitle="Alternance - Partie 2 - BUT Informatique" uptext="Avril 2025 - Août 2025" variant="gold" image="/Portfolio/images/logos/Unicancer-logo.png">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <Card id="cpam" title="CPAM du Vaucluse" uptext="Septembre 2026 - Juillet 2027" variant="gold" image="/Portfolio/images/logos/Unicancer-logo.png">
+        </Card>
+        <Card id="unicancer" title="UniCancer" uptext="Avril 2025 - Août 2025" variant="gold" image="/Portfolio/images/logos/Unicancer-logo.png">
           <Unicancer />
         </Card>
-        <Card id="gustave" title="Gustave Roussy" subtitle="Alternance - Partie 1 - BUT Informatique" uptext="Septembre 2024 - Mars 2025" variant="gold" image="/Portfolio/images/logos/Gustave-Roussy-logo.png">
+        <Card id="gustave" title="Gustave Roussy" uptext="Septembre 2024 - Mars 2025" variant="gold" image="/Portfolio/images/logos/Gustave-Roussy-logo.png">
           <GustaveRoussy />  
         </Card>
         <Card id="apyclic" title="Apyclic informatique" subtitle="Stage d'études - BUT Informatique" uptext="Janvier 2024 - Mars 2024" variant="gold" image="/Portfolio/images/logos/Apyclic-logo.webp">
@@ -105,12 +106,9 @@ import Cryptadvisor from '../components/details/crypdadvisor.astro';
       <h2 class="text-2xl font-bold mb-8 flex items-center gap-4">
         Centres d'intérêts <span class="h-px flex-1 bg-p-gray-blue/10"></span>
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Card id="ferro" title="Ferroviaire" subtitle="Passion & Modélisme">
           <Ferroviaire />
-        </Card>
-        <Card id="info" title="Informatique" subtitle="Veille & Projets personnels" >
-          <Informatique />
         </Card>
         <Card id="musique" title="Musique" subtitle="Pratique instrumentale & Solfège">
           <Musique />
