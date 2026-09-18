@@ -126,10 +126,10 @@ import '../styles/global.css';
                     Corentin
                     <span class="text-p-gold">Echivard--Lizaso</span>
                 </h1>
-                <p class="text-p-gray-blue text-2xl mt-3 font-semibold">Futur ingénieur logiciel en alternance </p>
-                <div class="mt-2 p-4 bg-p-black/30 border-l-4 border-p-gold rounded-r-lg max-w-2xl">
+                <p class="text-p-gray-blue text-2xl mt-3 font-semibold">Ingénieur logiciel</p>
+                <div class="mt-1 p-2 bg-p-black/30 border-l-4 border-p-gold rounded-r-lg max-w-2xl">
                     <p class="text-p-platinum/90 text-sm leading-relaxed italic">
-                        "Futur ingénieur logiciel diplômé du Master ILSEN du CERI d'Avignon. À la recherche de mon premier poste en développement full-stack / ingénierie logicielle !"
+                        "Développeur full-stack (React, Symfony, TypeScript) et logiciel (C#, Rust) à la recherche de mon premier poste en ingénierie logicielle."
                     </p>
                 </div>
             </div>
@@ -144,9 +144,6 @@ import '../styles/global.css';
             <aside class="col-span-4 space-y-8 pr-2">
                 
                 <section class="space-y-4">
-                    <h3 class="text-p-gold font-bold uppercase tracking-widest text-xs mb-4 flex items-center gap-2">
-                        <Smartphone size={14} /> Coordonnées 
-                    </h3>
                     <ul class="space-y-3 text-sm">
                         <li class="flex items-center gap-3 text-p-gray-blue">
                             <Phone size={16} class="text-p-gold" /> 06 07 33 93 40
@@ -185,36 +182,105 @@ import '../styles/global.css';
                                 <img src="/Portfolio/images/qr-codes/qr-code-linkedIn.png" alt="QR LinkedIn" class="w-full h-full" />
                             </div>
                             <div>
-                                <p class="text-xs font-bold text-p-gold uppercase tracking-tighter">LinkedIn</p>
+                                <p class="text-s font-bold text-p-gold uppercase tracking-tighter">LinkedIn</p>
                             </div>
                         </a>
                     </div>
                 </section>
 
                 <section class="space-y-2 mb-3">
-                   <h3 class="text-p-gold font-bold uppercase tracking-widest text-xs">Centres d'intérêts</h3>
-                   <div class="space-y-2 overflow-hidden">
-                       <Card title="Ferroviaire" variant="cv" />
-                       <Card title="Musique" subtitle="Solfège et pratique instrumentale"  variant="cv" />
-                   </div>
-                </section>
-                <section class="space-y-2 mb-3">
                    <h3 class="text-p-gold font-bold uppercase tracking-widest text-xs">Compétences clés</h3>
                    <div class="space-y-2 overflow-hidden">
-                       <Card title="Dev Full-Stack" subtitle='React, Symfony, PHP, JS/TS, SQL' variant="cv" />
-                       <Card title="DevOps & Outils" subtitle="Docker, CI/CD, Git" variant="cv" />
+                       <Card title="Dev Full-Stack" subtitle='React, Symfony, PHP, JavaScript / TypeScript, SQL' variant="cv" />
+                       <Card title="Dev logiciel" subtitle='C# - Rust' variant="cv" />
+                       <Card title="DevOps & Outils" subtitle="Docker, CI/CD, Git - gitflow, GitLab" variant="cv" />
+                       <Card title="Gestion de projet" subtitle='Agile - Scrum, Kanban' variant="cv"/>
                    </div>
-                </section>
+                </section>                
                 <section class="space-y-2 mb-3">
                    <h3 class="text-p-gold font-bold uppercase tracking-widest text-xs">Bénévolat</h3> 
                    <div class="space-y-2 overflow-hidden">
-                       <Card title="BDE ETII" subtitle="Trésorier et bénévole" variant="cv" />
-                       <Card title="Comité Fêtes" subtitle="Bénévole" variant="cv" />
+                       <Card title="BDE ETII et Comité des Fêtes" subtitle="Trésorier et bénévole" variant="cv" />
+                   </div>
+                </section>
+                <section class="space-y-2 mb-3">
+                   <h3 class="text-p-gold font-bold uppercase tracking-widest text-xs">Langues</h3> 
+                   <div class="space-y-2 overflow-hidden">
+                        <Card title="Français" variant="cv" />
+                       <Card title="Anglais technique B2" variant="cv" />
                    </div>
                 </section>
             </aside>
 
             <main class="col-span-8 min-w-130">
+                <section>
+                    <h2 class="text-xl font-black mb-2 flex items-center gap-4">
+                        Expériences <span class="h-px flex-1 bg-p-gray-blue/20"></span>
+                    </h2>
+                    <div class="gap-2 grid pb-2">
+                        <div class="overflow-hidden">
+                            <Card 
+                                title="Développement web" 
+                                subtitle="2025 - UniCancer - Projet WeShare" 
+                                description={`Conception et création d'un outil de gestion d'étude clinique 
+                                    - En équipe de 10 personnes sur plusieurs domaines d'expertise
+                                    - Gestion de la partie frontend et présentation du travail réalisé avec la commanditaire du projet
+                                `}
+                                uptext='Symfony - React - SQL - TypeScript - Webpack'
+                                variant="cv" 
+                            />
+                        </div>
+                        <div class="overflow-hidden">
+                            <Card 
+                                title="Gestion d'un système d'information" 
+                                subtitle="2024 - Gustave Roussy - Projet génétique" 
+                                description={`Administration et développement du système d'information décisionnel de l'entreprise
+                                    - Gestion complète d'un projet de traitement de données biogénétiques
+                                    - Création de flux automatisés de données
+                                    - Administration de la plateforme utilisateur du SID de 12 To
+                                    - En relation avec les cadres des services concernés
+                                `}
+                                uptext='Business Intelligence - SQL - Gestion de projet'
+                                variant="cv" 
+                            />
+                        </div>
+                        <div class="overflow-hidden">
+                            <Card 
+                                title="Développement de logiciels de gestion" 
+                                subtitle="2023 - ApyClick" 
+                                description={`Développement de nouveaux logiciels internes pour la PME ApyClick
+                                    - Suivi des composants utilisés dans les activités de l'entreprise
+                                    - Enregistrement des statistiques de fréquentation du point de vente
+                                    - Gestion de projet (analyse du besoin, développement et déploiement)
+                                `}
+                                uptext='C# avec .net et WPF - MySQL'
+                                variant="cv" 
+                            />
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-black mb-2 flex items-center gap-4">
+                        Projet <span class="h-px flex-1 bg-p-gray-blue/20"></span>
+                    </h2>
+                    <div class="grid grid-cols-1 gap-2 pb-2">
+                        <div class="overflow-hidden">
+                            <Card 
+                                id="merchventory" 
+                                title="Application web" 
+                                description={`Création d'une plateforme de précommande et de gestion de stocks pour des groupes de musique
+                                    - Dockerisation de l'application
+                                    - Travail en équipe de 5 étudiants dont un graphiste
+                                    - Base de données SQL
+                                `}
+                                uptext="PHP, Symfony, MySQL" 
+                                variant="cv"
+                            >
+                        </div>
+                    </div>
+                </section>
+
                 <section class="gap-2 grid pb-2">
                     <h2 class="text-xl font-black flex items-center gap-4">
                         Formations <span class="h-px flex-1 bg-p-gray-blue/20"></span>
@@ -225,7 +291,7 @@ import '../styles/global.css';
                                 title="Master ILSEN" 
                                 subtitle="Univ. Avignon" 
                                 uptext="2025 - 2027" 
-                                description='Ingénierie du Logiciel de la SociétÉ Numérique (ILSEN)'
+                                description='Ingénierie du Logiciel de la Société Numérique (ILSEN)'
                                 variant="cv" 
                             />
                         </div>
@@ -240,79 +306,6 @@ import '../styles/global.css';
                         </div>
                     </div>
                 </section>
-            
-                <section>
-                    <h2 class="text-xl font-black mb-2 flex items-center gap-4">
-                        Expériences <span class="h-px flex-1 bg-p-gray-blue/20"></span>
-                    </h2>
-                    <div class="gap-2 grid pb-2">
-                        <div class="overflow-hidden">
-                            <Card 
-                                title="UniCancer" 
-                                subtitle="Développement web" 
-                                description={`Participation au développement d'un outil de gestion d'étude clinique complète à renommée internationale : WeShare
-                                    - En équipe de 10 personnes avec plusieurs domaines d'expertise
-                                    - Discussion et présentation du travail réalisé avec la commanditaire du projet
-                                    - Symfony - React - SQL
-                                `}
-                                uptext="2025" 
-                                variant="cv" 
-                            />
-                        </div>
-                        <div class="overflow-hidden">
-                            <Card 
-                                title="Gustave Roussy" 
-                                subtitle="Gestion d'un système d'information" 
-                                description={`Administration et développement du système d'information décisionnel de l'entreprise
-                                    - Gestion complète d'un projet de traitement de données biogénétiques
-                                    - En relation avec les cadres des services concernés
-                                    - Entrepôt de données - SQL - Gestion de projet
-                                    - Administration
-                                `}
-                                uptext="2024" 
-                                variant="cv" 
-                            />
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <h2 class="text-xl font-black mb-2 flex items-center gap-4">
-                        Projets <span class="h-px flex-1 bg-p-gray-blue/20"></span>
-                    </h2>
-                    <div class="grid grid-cols-2 gap-2 pb-2">
-                        <div class="overflow-hidden">
-                            <Card 
-                                id="merchventory" 
-                                title="Merchventory" 
-                                description={`Projet d'étude de 3ème année visant la création d'une plateforme de précommande et de gestion de stocks pour des groupes de musique
-                                    - Dockerisation de l'application
-                                    - Travail en équipe de 5 étudiants dont un graphiste
-                                    - Base de données SQL
-                                `}
-                                subtitle="Projet d'étude" 
-                                uptext="PHP, Symfony, MySQL" 
-                                variant="cv"
-                            >
-                        </div>
-                        <div class="overflow-hidden">
-                            <Card 
-                                id="cryptadvisor" 
-                                title="Crypta Dvisor" 
-                                description={`Projet d'étude de 4ème année consistant en la création d'une application web FullJS complète de gestion de capital de cryptomonnaies fictives
-                                    - CI/CD et Dockerisation complète
-                                    - Intégration d'API externes
-                                    - Utilisation d'un Gitflow pour l'organisation du travail
-                                `}
-                                subtitle="Projet d'étude" 
-                                uptext="Express.JS, React" 
-                                variant="cv" 
-                            />
-                        </div>
-                    </div>
-                </section>
-            
-                
             </main>
         </div>
     </div>
