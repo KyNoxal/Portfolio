@@ -3,24 +3,26 @@ interface Props {
   title: string;
   subtitle?: string;
   uptext?: string;
+  description?: string;
   id?: string;
   image?: string;
   variant?: 'gold' | 'gray' | 'cv';
 }
 
-const { title, subtitle, uptext, id, image, variant = 'gray' } = Astro.props;
+const { title, subtitle, description, uptext, id, image, variant = 'gray' } = Astro.props;
 ---
 <button 
   id={id}
   class:list={[
     "card-trigger text-left transition-all border group relative overflow-hidden w-full",
-    variant === 'cv' ? "p-3 mb-1" : "min-w-[300px] p-6",
+    variant === 'cv' ? "pl-2 p-1" : "min-w-[100px] p-4",
     variant === 'gold' && "bg-p-gray-dark border-l-4 border-l-p-gold border-y-transparent border-r-transparent",
     variant === 'gray' && "bg-p-gray-dark border-p-gray-blue/10 hover:border-p-gold",
     variant === 'cv' && "bg-p-gray-dark/50 border-l-2 border-l-p-gold border-y-p-gray-blue/5 border-r-p-gray-blue/5"
   ]}
   data-title={title}
   data-subtitle={subtitle}
+  data-description={description}
   data-uptext={uptext}
   data-image={image}
 >
@@ -39,6 +41,15 @@ const { title, subtitle, uptext, id, image, variant = 'gray' } = Astro.props;
       variant === 'cv' ? "text-[11px]" : "text-sm"
     ]}>
       {subtitle}
+    </p>
+  )}
+
+  {description && (
+    <p class:list={[
+      "text-p-gray-white mt-1 whitespace-pre-line",
+      variant === 'cv' ? "text-[13px]" : "text-sm"
+    ]}>
+      {description}
     </p>
   )}
   

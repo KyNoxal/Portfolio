@@ -120,42 +120,42 @@ import '../styles/global.css';
 
     <div class="a4-container border border-p-gray-blue/10">
         
-        <header class="flex justify-between items-start border-b-2 border-p-gold pb-8 mb-8">
+        <header class="flex justify-between items-start border-b-2 border-p-gold pb-2 mb-2">
             <div class="flex-1">
-                <h1 class="text-5xl font-black uppercase tracking-tighter leading-none">
-                    Corentin <br/>
+                <h1 class="text-3xl font-black uppercase tracking-tighter leading-none">
+                    Corentin
                     <span class="text-p-gold">Echivard--Lizaso</span>
                 </h1>
-                <p class="text-p-gray-blue text-xl mt-3 font-semibold">Etudiant en première année de Master ILSEN </p>
-                <div class="mt-4 p-4 bg-p-black/30 border-l-4 border-p-gold rounded-r-lg max-w-2xl">
+                <p class="text-p-gray-blue text-2xl mt-3 font-semibold">Ingénieur logiciel</p>
+                <div class="mt-1 p-2 bg-p-black/30 border-l-4 border-p-gold rounded-r-lg max-w-2xl">
                     <p class="text-p-platinum/90 text-sm leading-relaxed italic">
-                        "Je recherche une alternance dans le domaine du développement web pour ma deuxième année de Master ILSEN à l'Université d'Avignon."
+                        "Développeur full-stack (React, Symfony, TypeScript) et logiciel (C#, Rust) à la recherche de mon premier poste en ingénierie logicielle."
                     </p>
                 </div>
             </div>
             
-            <div class="w-32 h-32 rounded-2xl border-2 border-p-gold overflow-hidden rotate-3 hover:rotate-0 transition-transform duration-500 shadow-2xl">
+            <div class="w-32 h-32 rounded-2xl border-2 border-p-gold overflow-hidden transition-transform duration-500 shadow-2xl">
                 <img src="/Portfolio/images/6720840755940036346.jpeg" alt="Photo de Corentin ECHIVARD--LIZASO" class="w-full h-full object-cover" />
             </div>
         </header>
 
-        <div class="grid grid-cols-12 gap-8">
+        <div class="grid grid-cols-12 gap-8 max-w-[650px]">
             
-            <aside class="col-span-4 space-y-8 border-r border-p-gray-blue/10 pr-6">
+            <aside class="col-span-4 space-y-8 pr-2">
                 
                 <section class="space-y-4">
-                    <h3 class="text-p-gold font-bold uppercase tracking-widest text-xs mb-4 flex items-center gap-2">
-                        <Smartphone size={14} /> Coordonnées 
-                    </h3>
                     <ul class="space-y-3 text-sm">
                         <li class="flex items-center gap-3 text-p-gray-blue">
                             <Phone size={16} class="text-p-gold" /> 06 07 33 93 40
                         </li>
-                        <li class="flex items-center gap-3 text-p-gray-blue">
-                            <Mail size={16} class="text-p-gold" /> corentin.lizaso@gmail.com
+                        <li class="text-p-gray-blue">
+                            <div class="flex items-center gap-3">
+                                <Mail size={16} class="text-p-gold flex-shrink-0" />
+                                <p class="text-sm">corentin.echivardlizaso&#8203;@proton.me</p>
+                            </div>
                         </li>
                         <li class="flex items-center gap-3 text-p-gray-blue">
-                            <MapPin size={16} class="text-p-gold" /> Avignon
+                            <MapPin size={16} class="text-p-gold" /> Avignon / Bordeaux
                         </li>
                         <li class="flex items-center gap-3 text-p-gray-blue">
                             <Car size={16} class="text-p-gold" /> Mobile / Permis B
@@ -163,17 +163,18 @@ import '../styles/global.css';
                     </ul>
                 </section>
 
-                <section class="space-y-6">
+                <section class="space-y-6 mb-3">
                     <h3 class="text-p-gold font-bold uppercase tracking-widest text-xs flex items-center gap-2">
                         <Globe size={14} /> Liens
                     </h3>
                     <div class="grid grid-cols-1 gap-4">
                         <a href="https://kynoxal.github.io/Portfolio/" target="_blank" class="flex items-center gap-4 p-3 bg-white/5 border border-p-gray-blue/20 rounded-xl hover:bg-p-gold/10 transition-colors group">
                             <div class="bg-white p-1 rounded-lg w-16 h-16 shrink-0">
-                                <img src="/Portfolio/images/qr-codes/qr-code-linkedIn.png" alt="QR Portfolio" class="w-full h-full" />
+                                <img src="/Portfolio/images/qr-codes/qr-code-portfolio.png" alt="QR Portfolio" class="w-full h-full" />
                             </div>
                             <div>
-                                <p class="text-xs font-bold text-p-gold uppercase tracking-tighter">Portfolio</p>
+                                <p class="text-s font-bold text-p-gold uppercase tracking-tighter">Portfolio</p>
+                                <p class="text-xs text-p-platinum">Apprenez en plus sur moi et mes projets !</p>
                             </div>
                         </a>
                         <a href="https://www.linkedin.com/in/corentin-echivard-lizaso-77480026b/" target="_blank" class="flex items-center gap-4 p-3 bg-white/5 border border-p-gray-blue/20 rounded-xl hover:bg-p-gold/10 transition-colors group">
@@ -181,87 +182,127 @@ import '../styles/global.css';
                                 <img src="/Portfolio/images/qr-codes/qr-code-linkedIn.png" alt="QR LinkedIn" class="w-full h-full" />
                             </div>
                             <div>
-                                <p class="text-xs font-bold text-p-gold uppercase tracking-tighter">LinkedIn</p>
+                                <p class="text-s font-bold text-p-gold uppercase tracking-tighter">LinkedIn</p>
                             </div>
                         </a>
                     </div>
                 </section>
 
-                <section class="space-y-4">
-                   <h3 class="text-p-gold font-bold uppercase tracking-widest text-xs">Centres d'intérêts</h3>
+                <section class="space-y-2 mb-3">
+                   <h3 class="text-p-gold font-bold uppercase tracking-widest text-xs">Compétences clés</h3>
                    <div class="space-y-2 overflow-hidden">
-                       <Card title="Ferroviaire" variant="cv" />
-                       <Card title="Informatique" variant="cv" />
-                       <Card title="Musique" subtitle="Solfège et pratique instrumentale"  variant="cv" />
+                       <Card title="Dev Full-Stack" subtitle='React, Symfony, PHP, JavaScript / TypeScript, SQL' variant="cv" />
+                       <Card title="Dev logiciel" subtitle='C# - Rust' variant="cv" />
+                       <Card title="DevOps & Outils" subtitle="Docker, CI/CD, Git - gitflow, GitLab" variant="cv" />
+                       <Card title="Gestion de projet" subtitle='Agile - Scrum, Kanban' variant="cv"/>
+                   </div>
+                </section>                
+                <section class="space-y-2 mb-3">
+                   <h3 class="text-p-gold font-bold uppercase tracking-widest text-xs">Bénévolat</h3> 
+                   <div class="space-y-2 overflow-hidden">
+                       <Card title="BDE ETII et Comité des Fêtes" subtitle="Trésorier et bénévole" variant="cv" />
+                   </div>
+                </section>
+                <section class="space-y-2 mb-3">
+                   <h3 class="text-p-gold font-bold uppercase tracking-widest text-xs">Langues</h3> 
+                   <div class="space-y-2 overflow-hidden">
+                        <Card title="Français" variant="cv" />
+                       <Card title="Anglais technique B2" variant="cv" />
                    </div>
                 </section>
             </aside>
 
-            <main class="col-span-8 space-y-8">
+            <main class="col-span-8 min-w-130">
                 <section>
-                    <h2 class="text-xl font-black mb-4 flex items-center gap-4">
-                        Formations <span class="h-px flex-1 bg-p-gray-blue/20"></span>
-                    </h2>
-                    <div class="grid grid-cols-3 gap-2">
-                        <div class="max-w-[260px] overflow-hidden">
-                            <Card title="Master ILSEN" subtitle="Univ. Avignon" uptext="2025 - 2027" variant="cv" />
-                        </div>
-                        <div class="max-w-[260px] overflow-hidden">
-                            <Card title="BUT Informatique" subtitle="IUT Dijon" uptext="2022 - 2025" variant="cv" />
-                        </div>
-                        <div class="max-w-[260px] overflow-hidden">
-                            <Card title="BAC STI2D" subtitle="Lycée G.S.H" uptext="2019 - 2022" variant="cv" />
-                        </div>
-                    </div>
-                </section>
-            
-                <section>
-                    <h2 class="text-xl font-black mb-4 flex items-center gap-4">
+                    <h2 class="text-xl font-black mb-2 flex items-center gap-4">
                         Expériences <span class="h-px flex-1 bg-p-gray-blue/20"></span>
                     </h2>
-                    <div class="grid grid-cols-3 gap-2">
-                        <div class="max-w-[260px] overflow-hidden">
-                            <Card title="UniCancer" subtitle="Alternance - Développement web" uptext="2025" variant="cv" />
+                    <div class="gap-2 grid pb-2">
+                        <div class="overflow-hidden">
+                            <Card 
+                                title="Développement web" 
+                                subtitle="2025 - UniCancer - Projet WeShare" 
+                                description={`Conception et création d'un outil de gestion d'étude clinique 
+                                    - En équipe de 10 personnes sur plusieurs domaines d'expertise
+                                    - Gestion de la partie frontend et présentation du travail réalisé avec la commanditaire du projet
+                                `}
+                                uptext='Symfony - React - SQL - TypeScript - Webpack'
+                                variant="cv" 
+                            />
                         </div>
-                        <div class="max-w-[260px] overflow-hidden">
-                            <Card title="Gustave Roussy" subtitle="Alternance - Gestion système d'information" uptext="2024" variant="cv" />
+                        <div class="overflow-hidden">
+                            <Card 
+                                title="Gestion d'un système d'information" 
+                                subtitle="2024 - Gustave Roussy - Projet génétique" 
+                                description={`Administration et développement du système d'information décisionnel de l'entreprise
+                                    - Gestion complète d'un projet de traitement de données biogénétiques
+                                    - Création de flux automatisés de données
+                                    - Administration de la plateforme utilisateur du SID de 12 To
+                                    - En relation avec les cadres des services concernés
+                                `}
+                                uptext='Business Intelligence - SQL - Gestion de projet'
+                                variant="cv" 
+                            />
                         </div>
-                        <div class="max-w-[260px] overflow-hidden">
-                            <Card title="Apyclic" subtitle="Stage - Développement logiciel" uptext="2024" variant="cv" />
+                        <div class="overflow-hidden">
+                            <Card 
+                                title="Développement de logiciels de gestion" 
+                                subtitle="2023 - ApyClick" 
+                                description={`Développement de nouveaux logiciels internes pour la PME ApyClick
+                                    - Suivi des composants utilisés dans les activités de l'entreprise
+                                    - Enregistrement des statistiques de fréquentation du point de vente
+                                    - Gestion de projet (analyse du besoin, développement et déploiement)
+                                `}
+                                uptext='C# avec .net et WPF - MySQL'
+                                variant="cv" 
+                            />
                         </div>
                     </div>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-black mb-4 flex items-center gap-4">
-                        Projets <span class="h-px flex-1 bg-p-gray-blue/20"></span>
+                    <h2 class="text-xl font-black mb-2 flex items-center gap-4">
+                        Projet <span class="h-px flex-1 bg-p-gray-blue/20"></span>
                     </h2>
-                    <div class="grid grid-cols-3 gap-2">
-                        <div class="max-w-[260px] overflow-hidden">
-                            <Card id="merchventory" title="Merchventory" subtitle="Projet d'étude - Gestion de stock de groupe musicaux" uptext="PHP, Symfony, MySQL" variant="cv">
-                        </div>
-                        <div class="max-w-[260px] overflow-hidden">
-                            <Card id="portfolio" title="Portfolio" subtitle="Site personnel - Présentation de mon parcours" uptext="Astro, Tailwind CSS" variant="cv"/>
-                        </div>
-                        <div class="max-w-[260px] overflow-hidden">
-                            <Card id="cryptadvisor" title="Crypta Dvisor" subtitle="Projet d'étude - Outil d'analyse en crypto monnaies" uptext="Express.JS, React" variant="cv" />
+                    <div class="grid grid-cols-1 gap-2 pb-2">
+                        <div class="overflow-hidden">
+                            <Card 
+                                id="merchventory" 
+                                title="Application web" 
+                                description={`Création d'une plateforme de précommande et de gestion de stocks pour des groupes de musique
+                                    - Dockerisation de l'application
+                                    - Travail en équipe de 5 étudiants dont un graphiste
+                                    - Base de données SQL
+                                `}
+                                uptext="PHP, Symfony, MySQL" 
+                                variant="cv"
+                            >
                         </div>
                     </div>
                 </section>
-            
-                <section>
-                    <h2 class="text-xl font-black mb-4 flex items-center gap-4">
-                        Bénévolats <span class="h-px flex-1 bg-p-gray-blue/20"></span>
+
+                <section class="gap-2 grid pb-2">
+                    <h2 class="text-xl font-black flex items-center gap-4">
+                        Formations <span class="h-px flex-1 bg-p-gray-blue/20"></span>
                     </h2>
-                    <div class="grid grid-cols-3 gap-2">
+                    <div class="grid grid-cols-2 gap-2">
                         <div class="max-w-[260px] overflow-hidden">
-                            <Card title="BDE ETII" subtitle="Trésorier et bénévole" variant="cv" />
+                            <Card 
+                                title="Master ILSEN" 
+                                subtitle="Univ. Avignon" 
+                                uptext="2025 - 2027" 
+                                description='Ingénierie du Logiciel de la Société Numérique (ILSEN)'
+                                variant="cv" 
+                            />
                         </div>
                         <div class="max-w-[260px] overflow-hidden">
-                            <Card title="Comité Fêtes" subtitle="Bénévole" variant="cv" />
-                        </div>
-                        <div class="max-w-[260px] overflow-hidden">
-                            <Card id="cjeune" title="Comité Jeunesse" subtitle="Membre" variant="cv"/>
+                            <Card 
+                                title="BUT Informatique" 
+                                subtitle="IUT Dijon" 
+                                description="Réalisation, conception, développement, validation"
+                                uptext="2022 - 2025" 
+                                variant="cv" 
+                            />
                         </div>
                     </div>
                 </section>
